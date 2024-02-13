@@ -1,4 +1,5 @@
 import Swal from 'sweetalert2'
+import Navbar from './Navbar';
 const AddCoffee = () => {
 
     const handleAddCoffee = e =>{
@@ -38,6 +39,7 @@ const AddCoffee = () => {
     }
     return (
         <div>
+            <Navbar></Navbar>
             <form  onSubmit={handleAddCoffee} className="bg-[#F4F3F0] ">
                 <h3 className="text-3xl font-bold p-6">Add A Coffee</h3>
                 <div className="md:flex gap-4 mx-10 mb-8">

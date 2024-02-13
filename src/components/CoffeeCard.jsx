@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const CoffeeCard = ({ coffee ,setUpdatedCoffees,updatedCoffees }) => {
@@ -49,7 +50,7 @@ const CoffeeCard = ({ coffee ,setUpdatedCoffees,updatedCoffees }) => {
                 </div>
                 <div className='flex flex-col gap-3'>
                     <button className='btn bg-green-400 '>View</button>
-                    <button className='btn bg-teal-300 '>Update</button>
+                    <Link to={`updateCoffee/${_id}`} className='btn bg-teal-300 '>Update</Link>
 
                     <button onClick={() => handleDelete(_id)} className='btn bg-red-600 text-white'>Delete</button>
                 </div>
