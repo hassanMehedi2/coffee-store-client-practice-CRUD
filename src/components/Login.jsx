@@ -22,7 +22,7 @@ const Login = () => {
                     lastLoggedAt: res.user?.metadata?.lastSignInTime
                 } 
 
-                fetch("http://localhost:5000/user", {
+                fetch("https://coffee-store-server-self.vercel.app/user", {
                     method: "PATCH",
                     headers: {
                         'content-type': 'application/json'
@@ -31,7 +31,7 @@ const Login = () => {
                 })
                     .then(res => res.json)
                     .then(() => {
-                        console.log('sucessfully added last logged in time');
+                        console.log('successfully added last logged in time');
                     })
             })
             .catch(error => {
